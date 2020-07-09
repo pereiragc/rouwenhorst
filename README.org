@@ -10,3 +10,5 @@ sig = 0.01
 gridpts, transition = rouwenhorst(npts, rho, sig)
 #+END_SRC
 where =rho= is the autocorrelation, =npts= is the number of points in the resulting discretized process, and =sig= is the /error/ standard deviation.
+
+Returns a vector =gridpts= with the support and the Markov matrix =transition=.
