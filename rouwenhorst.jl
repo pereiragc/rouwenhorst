@@ -5,17 +5,17 @@
 # gridpts, transition = rouwenhorst(npts, rho, sig)
 
 
-function RouwenNormalize!(A::Array{Float64, 2})
+function RouwenNormalize!(A)
     A[2:end-1, :] ./= 2
     nothing
 end
 
-function rouwenupdate!(Πold::Array{Float64, 2}, Πnew::Array{Float64, 2}, p, q)
+function rouwenupdate!(Πold, Πnew, p, q)
     Nold = size(Πold, 1)
     Πnew[1:Nold, 1:Nold] = p*Πold
-    Πnew[1:Nold, 2:(Nold+1)] += (1-p)*Πold
-    Πnew[2:(Nold+1), 1:Nold] += (1-q)*Πold
-    Πnew[2:(Nold+1), 2:(Nold+1)] += q*Πold
+    Πnew[1:Nold, 2:(Nold+1)] .+= (1-p)*Πold
+    Πnew[2:(Nold+1), 1:Nold] .+= (1-q)*Πold
+    Πnew[2:(Nold+1), 2:(Nold+1)] .+= q*Πold
     nothing
 end
 
