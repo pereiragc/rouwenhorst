@@ -1,7 +1,4 @@
-#+TITLE: Readme
-
-
-* Rouwenhorst method
+* Rouwenhorst
 
 Discretizes a stable AR(1) with process with zero mean. Usage:
 #+BEGIN_SRC julia
