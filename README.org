@@ -15,11 +15,14 @@ Returns a vector =gridpts= with the support and the Markov matrix =transition=.
 
 * Bonus: equiprobable discretization
 
-The function ~eqprob_discretize~ (see ~finitesupport.jl~) might come in handy when you need a discrete approximation of a variable with continuous support.
+The function ~eqprob_discretize~ (see ~finitesupport.jl~) might come in handy when you need a discrete approximation of a variable with continuous support. A picture worth a thousand words:
 
-An example is worth a thousand words:
 
-#+BEGIN_SRC jupyter-julia :session jl :async yes :exports both :results file graphics :file figure/distcompare.png
+[[./figure/distcompare.png]]
+
+How to generate that:
+
+#+BEGIN_SRC jupyter-julia :session jl :async yes :exports code
 include("finitesupport.jl")
 
 using Distributions
@@ -44,5 +47,3 @@ plot!(discrete_version, cumsum(pmf(discrete_version)),
       label="Discretized")
 #+END_SRC
 
-#+RESULTS:
-[[file:distcompare.png]]
