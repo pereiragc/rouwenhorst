@@ -22,7 +22,7 @@ The function ~eqprob_discretize~ (see ~finitesupport.jl~) might come in handy wh
 
 How to generate that:
 
-#+BEGIN_SRC jupyter-julia :session jl :async yes :exports code
+#+BEGIN_SRC julia :exports code
 include("finitesupport.jl")
 
 using Distributions
@@ -45,6 +45,5 @@ plot(x -> cdf(some_dist, x), domain_cmp, lw=2, legend=:bottomright,
 plot!(discrete_version, cumsum(pmf(discrete_version)),
       ms=2.5, msw=0, color = :midnightblue, seriestype = :steppost,
       label="Discretized")
-
 #+END_SRC
 
