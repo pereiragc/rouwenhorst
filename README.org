@@ -19,8 +19,7 @@ The function ~eqprob_discretize~ (see ~finitesupport.jl~) might come in handy wh
 
 An example is worth a thousand words:
 
-#+BEGIN_SRC julia :results file graphics :file ./distcompare.png
-
+#+BEGIN_SRC jupyter-julia :session jl :async yes :results file graphics :file ./distcompare.png
 include("finitesupport.jl")
 
 using Distributions
