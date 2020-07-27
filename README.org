@@ -19,7 +19,7 @@ The function ~eqprob_discretize~ (see ~finitesupport.jl~) might come in handy wh
 
 An example is worth a thousand words:
 
-#+BEGIN_SRC jupyter-julia :session jl :async yes :results graphics
+#+BEGIN_SRC jupyter-julia :session jl :async yes :exports both :results file graphics :file distcompare.png
 include("finitesupport.jl")
 
 using Distributions
@@ -45,8 +45,4 @@ plot!(discrete_version, cumsum(pmf(discrete_version)),
 #+END_SRC
 
 #+RESULTS:
-[[file:./distcompare.png]]
-
-
- Above code generates
- [[file:./distcompare.png]]
+[[file:distcompare.png]]
