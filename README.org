@@ -43,7 +43,5 @@ plot(x -> cdf(some_dist, x), domain_cmp, lw=2, legend=:bottomright,
      label="'True'", color=:gray60, title="Pareto distribution")
 
 plot!(discrete_version, cumsum(pmf(discrete_version)),
-      ms=2.5, msw=0, color = :midnightblue, seriestype = :steppost,
-      label="Discretized")
+      label="Discretized", color = :midnightblue, seriestype = :steppost)
 #+END_SRC
-
